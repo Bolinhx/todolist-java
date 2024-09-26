@@ -24,7 +24,7 @@ public class TodoService {
                 Sort.by("nome").ascending());
         return todoRepository.findAll(sort);
     }
-    public List<Todo> update(Todo todo){
+    public List<Todo> update(Long id, Todo todo){
         todoRepository.save(todo);
         return list();
     }
